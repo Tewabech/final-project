@@ -32,7 +32,7 @@ function Register() {
     users.push(formData);
     localStorage.setItem('users', JSON.stringify(users));
 
-    alert('Registration successful! Please login.');
+    //alert('Registration successful! Please login.');
     navigate('/login'); // redirect to login page
   };
 
@@ -81,7 +81,7 @@ function Register() {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+          className="bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition"
         >
           Register
         </button>

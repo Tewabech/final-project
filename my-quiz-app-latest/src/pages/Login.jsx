@@ -28,7 +28,7 @@ function Login() {
     if (user) {
       // Save login status
       localStorage.setItem('currentUser', JSON.stringify(user));
-      alert(`Welcome back, ${user.name}!`);
+      //alert(`Welcome back, ${user.name}!`);
       navigate('/dashboard'); // Redirect to dashboard page
     } else {
       alert('Invalid username or password.');
@@ -68,7 +68,7 @@ function Login() {
 
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+          className="bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition"
         >
           Login
         </button>

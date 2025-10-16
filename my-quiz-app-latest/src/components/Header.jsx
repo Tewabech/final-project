@@ -1,8 +1,9 @@
 // src/components/Header.jsx
 import React from 'react';
 import logo from '../assets/maze3.png'; //  logo path
+import { Link } from "react-router-dom"; // ✅ Import Link
 
-function Header() {
+export default function Header() {
   return (
     <header className="bg-black text-white shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
@@ -16,17 +17,15 @@ function Header() {
         <nav>
           <ul className="flex space-x-6 font-medium">
             <li>
-              <a href="/" className="hover:text-gray-400 transition">Home</a>
+             <Link to="/" className="hover:text-gray-400 transition">Home </Link>
             </li>
             <li>
-              <a href="/dashboard" className="hover:text-gray-400 transition">Dashboard</a>
+              <Link to="/dashboard" className="hover:text-gray-400 transition">Dashboard</Link>
             </li>
             <li>
-              <a href="/contactus" className="hover:text-gray-400 transition">Contact Us</a>
+              <Link to="/contact" className="hover:text-gray-400 transition">Contact</Link>
             </li>
-            <li>
-              <a href="/aboutus" className="hover:text-gray-400 transition">About Us</a>
-            </li>
+            <Link to="/about" className="hover:text-gray-400 transition">About</Link>
           </ul>
         </nav>
       </div>
@@ -34,4 +33,3 @@ function Header() {
   );
 }
 
-export default Header;

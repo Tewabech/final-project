@@ -1,34 +1,21 @@
 // src/components/Footer.jsx
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-200 mt-8">
-      <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
-        {/* Left side */}
-        <div className="mb-4 md:mb-0">
-          <h2 className="text-lg font-bold">Quizzy</h2>
-          <p className="text-sm">© {new Date().getFullYear()} MyCompany. All rights reserved.</p>
-        </div>
+    <footer className="bg-gray-800 text-gray-200 py-3">
+      <div className="container mx-auto px-4 flex justify-between items-center text-sm">
+        <p>© {new Date().getFullYear()} QuizApp. All rights reserved.</p>
 
-        {/* Navigation links */}
-        <ul className="flex space-x-6 text-sm">
-          <li>
-            <a href="/" className="hover:text-white transition">Home</a>
-          </li>
-          <li>
-            <a href="/dashboard" className="hover:text-white transition">Dashboard</a>
-          </li>
-          <li>
-            <a href="/contactus" className="hover:text-white transition">Contact Us</a>
-          </li>
-          <li>
-            <a href="/aboutus" className="hover:text-white transition">About Us</a>
-          </li>
-        </ul>
+        <div className="space-x-4">
+          <Link to="/" className="hover:text-gray-400">Home</Link>
+          <Link to="/about" className="hover:text-gray-400">About</Link>
+          <Link to="/contact" className="hover:text-gray-400">Contact</Link>
+          <Link to="/dashboard" className="hover:text-gray-400 transition">Dashboard</Link>
+        </div>
       </div>
     </footer>
   );
 }
 
-export default Footer;
